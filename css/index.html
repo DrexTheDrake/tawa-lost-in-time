@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Découvrez Tawa: Lost in Time, un jeu d'aventure préhistorique unique avec des dinosaures et des mammifères. Sortie prévue fin 2025 !">
+    <meta name="keywords" content="jeu vidéo, préhistoire, dinosaures, aventure, Tawa Lost in Time, jeu immersif, jeu 2025">
+    <meta name="author" content="Studio Tawa Games">
+    <title>Tawa: Lost in Time - Accueil</title>
+    
+    <!-- Bootstrap CSS (Local) -->
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        function countdown() {
+            const releaseDate = new Date("2025-09-15T00:00:00").getTime();
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = releaseDate - now;
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById("countdown").innerHTML = "Tawa: Lost in Time est maintenant disponible !";
+                    return;
+                }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("countdown").innerHTML = `${days}j ${hours}h ${minutes}m ${seconds}s`;
+            }, 1000);
+        }
+        window.onload = countdown;
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html">Tawa: Lost in Time</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i data-feather="menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gameplay">Gameplay</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#news">Actualités</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero bg-dark text-white text-center py-5">
+        <div class="container">
+            <h1>Plongez dans l'aventure préhistorique de Tawa: Lost in Time</h1>
+            <p>Un monde vivant et sauvage où vous incarnez des créatures d'une époque oubliée. Sortie prévue pour fin 2025 !</p>
+            <div id="countdown" class="countdown"></div>
+            <a href="#gameplay" class="btn btn-primary mt-3">Découvrir</a>
+        </div>
+    </section>
+    
+    <section id="about" class="about py-5 bg-light">
+        <div class="container text-center">
+            <h2>À propos du jeu</h2>
+            <p>Tawa: Lost in Time est un jeu d'aventure immersif qui vous plonge dans un monde préhistorique dynamique. Incarnez Tawa, une créature légendaire, et explorez un univers rempli de mystères.</p>
+        </div>
+    </section>
+    
+    <footer class="footer bg-dark text-white text-center py-4">
+        <p>&copy; 2025 Tawa Games. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Bootstrap JS (Local) -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
