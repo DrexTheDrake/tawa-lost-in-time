@@ -46,12 +46,13 @@
             --beige: #F5F5DC;
             --blanc: #FFFFFF;
             --gris-clair: #ECECEC;
+            --noir: #000000;
         }
 
         /* Style général */
         body {
             background-color: var(--blanc);
-            color: var(--brun);
+            color: var(--noir);
             font-family: 'Arial', sans-serif;
         }
 
@@ -71,9 +72,20 @@
         /* Section héro (bannière) */
         .hero {
             background: url('css/img/jungle-bg.jpg') no-repeat center/cover;
-            padding: 80px 0;
+            padding: 120px 0;
             text-align: center;
             color: var(--blanc);
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(135deg, var(--vert-foncé) 50%, transparent 50%);
         }
 
         /* Boutons */
@@ -82,6 +94,8 @@
             border-color: var(--vert-foncé);
             padding: 10px 20px;
             font-size: 18px;
+            border-radius: 8px;
+            color: var(--blanc);
         }
 
         .btn-primary:hover {
@@ -89,13 +103,25 @@
             border-color: var(--brun);
         }
 
-        /* Sections générales */
+        /* Sections avec angles inclinés */
         .section {
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
+            position: relative;
         }
+
         .section:nth-child(even) {
             background-color: var(--gris-clair);
+        }
+
+        .section::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(-135deg, var(--gris-clair) 50%, transparent 50%);
         }
 
         /* Pied de page */
@@ -168,12 +194,6 @@
 
 <footer class="footer">
     <p>&copy; 2025 Tawa Games. Tous droits réservés.</p>
-    <div class="social-icons">
-        <a href="[LIEN DISCORD]" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="[LIEN TWITTER]" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="[LIEN INSTAGRAM]" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="[LIEN YOUTUBE]" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
 </footer>
 
 <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
