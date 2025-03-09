@@ -2,20 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Découvrez Tawa: Lost in Time, un jeu d'aventure préhistorique unique avec des dinosaures et des mammifères. Sortie prévue fin 2025 !">
-    <meta name="keywords" content="jeu vidéo, préhistoire, dinosaures, aventure, Tawa Lost in Time, jeu immersif, jeu 2025">
+    <meta name="description" content="Découvrez Tawa: Lost in Time, un jeu d'aventure préhistorique unique avec des dinosaures et des mystères. Sortie prévue en 2025 !">
+    <meta name="keywords" content="jeu vidéo, préhistoire, dinosaures, aventure, survie, exploration, Tawa Lost in Time, indie game">
     <meta name="author" content="Studio Tawa Games">
     <title>Tawa: Lost in Time - Accueil</title>
-    
-    <!-- Bootstrap CSS (Local) -->
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
     
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
+    <!-- FontAwesome & Feather Icons -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
 
     <script>
         function countdown() {
@@ -25,60 +25,113 @@
                 const distance = releaseDate - now;
                 if (distance < 0) {
                     clearInterval(timer);
-                    document.getElementById("countdown").innerHTML = "Tawa: Lost in Time est maintenant disponible !";
+                    document.getElementById("countdown").innerHTML = "🚀 Tawa: Lost in Time est maintenant disponible !";
                     return;
                 }
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                document.getElementById("countdown").innerHTML = `${days}j ${hours}h ${minutes}m ${seconds}s`;
+                document.getElementById("countdown").innerHTML = `⏳ Sortie dans : ${days}j ${hours}h ${minutes}m`;
             }, 1000);
         }
         window.onload = countdown;
     </script>
+
+    <style>
+        body {
+            background-color: #2E7D32;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+        .hero {
+            background: url('assets/img/jungle-bg.jpg') no-repeat center/cover;
+            padding: 120px 0;
+            text-align: center;
+            color: white;
+        }
+        .btn-primary {
+            background-color: #388E3C;
+            border-color: #2E7D32;
+        }
+        .footer {
+            background-color: #1B5E20;
+            padding: 20px 0;
+        }
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .image-container img {
+            width: 70%;
+            border-radius: 10px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: white;
+        }
+        .social-icons a:hover {
+            color: #FFD700;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container px-5">
-                <a class="navbar-brand" href="index.html">Tawa: Lost in Time</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i data-feather="menu"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#gameplay">Gameplay</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#news">Actualités</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <section class="hero bg-dark text-white text-center py-5">
-        <div class="container">
-            <h1>Plongez dans l'aventure préhistorique de Tawa: Lost in Time</h1>
-            <p>Un monde vivant et sauvage où vous incarnez des créatures d'une époque oubliée. Sortie prévue pour fin 2025 !</p>
-            <div id="countdown" class="countdown"></div>
-            <a href="#gameplay" class="btn btn-primary mt-3">Découvrir</a>
-        </div>
-    </section>
-    
-    <section id="about" class="about py-5 bg-light">
-        <div class="container text-center">
-            <h2>À propos du jeu</h2>
-            <p>Tawa: Lost in Time est un jeu d'aventure immersif qui vous plonge dans un monde préhistorique dynamique. Incarnez Tawa, une créature légendaire, et explorez un univers rempli de mystères.</p>
-        </div>
-    </section>
-    
-    <footer class="footer bg-dark text-white text-center py-4">
-        <p>&copy; 2025 Tawa Games. Tous droits réservés.</p>
-    </footer>
 
-    <!-- Bootstrap JS (Local) -->
-    <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container px-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo.png" alt="Logo Tawa" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i data-feather="menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#gameplay">Gameplay</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#news">Actualités</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>🚀 Tawa: Lost in Time</h1>
+        <p>Un jeu de survie et d’exploration dans un monde préhistorique fascinant.</p>
+        <div id="countdown" class="countdown"></div>
+        <a href="#gameplay" class="btn btn-primary mt-3">🎮 Explorer le jeu</a>
+    </div>
+</section>
+
+<section id="about" class="container py-5 text-center">
+    <h2>🔍 À propos du jeu</h2>
+    <p><strong>Tawa: Lost in Time</strong> est un jeu d'aventure où vous incarnez <strong>Saora</strong>, un petit mammifère tentant de survivre parmi les dinosaures et découvrir les secrets d'un monde en mutation.</p>
+    <div class="image-container">
+        <img src="assets/img/about-game.jpg" alt="Image du jeu">
+    </div>
+</section>
+
+<section id="gameplay" class="container py-5 text-center">
+    <h2>🎮 Gameplay</h2>
+    <p>Découvrez les mécaniques uniques de **Tawa**, de l’instinct animal aux interactions avec un environnement dynamique.</p>
+    <iframe width="70%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<footer class="footer text-center">
+    <p>&copy; 2025 Tawa Games. Tous droits réservés.</p>
+    <div class="social-icons">
+        <a href="[LIEN DISCORD]" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="[LIEN TWITTER]" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="[LIEN INSTAGRAM]" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="[LIEN YOUTUBE]" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+</footer>
+
+<script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
