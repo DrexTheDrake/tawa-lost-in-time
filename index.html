@@ -71,9 +71,20 @@
         /* Section héro (bannière) */
         .hero {
             background: url('css/img/jungle-bg.jpg') no-repeat center/cover;
-            padding: 80px 0;
+            padding: 120px 0;
             text-align: center;
             color: var(--blanc);
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(135deg, var(--vert-foncé) 50%, transparent 50%);
         }
 
         /* Boutons */
@@ -82,6 +93,7 @@
             border-color: var(--vert-foncé);
             padding: 10px 20px;
             font-size: 18px;
+            border-radius: 8px;
         }
 
         .btn-primary:hover {
@@ -89,15 +101,99 @@
             border-color: var(--brun);
         }
 
-        /* Sections générales */
+        /* Sections avec angles inclinés */
         .section {
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
+            position: relative;
         }
+
         .section:nth-child(even) {
             background-color: var(--gris-clair);
         }
 
+        .section::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(-135deg, var(--gris-clair) 50%, transparent 50%);
+        }
+
         /* Pied de page */
         .footer {
-            ba
+            background-color: var(--vert-foncé);
+            color: var(--blanc);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Images */
+        .image-container img {
+            width: 80%;
+            border-radius: 10px;
+            border: 3px solid var(--brun);
+            margin-top: 20px;
+        }
+
+        /* Icônes sociales */
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: var(--blanc);
+        }
+        .social-icons a:hover {
+            color: var(--beige);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container px-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="css/img/logo.png" alt="Logo Tawa" height="50">
+            </a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>🚀 Tawa: Lost in Time</h1>
+        <p>Un jeu de survie et d’exploration dans un monde préhistorique fascinant.</p>
+        <div id="countdown" class="countdown"></div>
+        <a href="#gameplay" class="btn btn-primary mt-3">🎮 Explorer le jeu</a>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2>🔍 À propos du jeu</h2>
+        <p><strong>Tawa: Lost in Time</strong> est un jeu d'aventure où vous incarnez <strong>Saora</strong>, un petit mammifère tentant de survivre parmi les dinosaures.</p>
+        <div class="image-container">
+            <img src="css/img/about-game.jpg" alt="Image du jeu">
+        </div>
+    </div>
+</section>
+
+<section id="gameplay" class="section">
+    <div class="container">
+        <h2>🎮 Gameplay</h2>
+        <p>Découvrez les mécaniques uniques de **Tawa**, de l’instinct animal aux interactions avec un environnement dynamique.</p>
+        <div class="image-container">
+            <img src="css/img/gameplay-screenshot.jpg" alt="Gameplay de Tawa">
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2025 Tawa Games. Tous droits réservés.</p>
+</footer>
+
+<script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
