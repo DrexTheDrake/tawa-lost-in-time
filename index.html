@@ -38,63 +38,88 @@
     </script>
 
     <style>
+        /* Palette de couleurs */
+        :root {
+            --vert-clair: #388E3C;
+            --vert-foncé: #1B5E20;
+            --brun: #8B5A2B;
+            --brun-foncé: #5D4037;
+            --beige: #F5F5DC;
+            --blanc: #FFFFFF;
+        }
+
+        /* Style général */
         body {
-            background-color: #2E7D32;
-            color: white;
+            background-color: var(--beige);
+            color: var(--brun-foncé);
             font-family: 'Arial', sans-serif;
         }
+
+        /* En-tête */
+        .navbar {
+            background-color: var(--vert-foncé);
+        }
+        .navbar a {
+            color: var(--beige);
+        }
+        .navbar a:hover {
+            color: var(--blanc);
+        }
+
+        /* Section héro (bannière) */
         .hero {
             background: url('css/img/jungle-bg.jpg') no-repeat center/cover;
             padding: 120px 0;
             text-align: center;
-            color: white;
+            color: var(--blanc);
+            background-blend-mode: overlay;
+            background-color: rgba(43, 70, 31, 0.7);
         }
+
+        /* Boutons */
         .btn-primary {
-            background-color: #388E3C;
-            border-color: #2E7D32;
+            background-color: var(--vert-clair);
+            border-color: var(--vert-foncé);
         }
+
+        .btn-primary:hover {
+            background-color: var(--brun);
+            border-color: var(--brun-foncé);
+        }
+
+        /* Pied de page */
         .footer {
-            background-color: #1B5E20;
+            background-color: var(--brun-foncé);
+            color: var(--beige);
             padding: 20px 0;
         }
-        .countdown {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+
+        /* Images */
         .image-container img {
             width: 70%;
             border-radius: 10px;
+            border: 3px solid var(--brun);
         }
+
+        /* Icônes sociales */
         .social-icons a {
             margin: 0 10px;
             font-size: 1.5rem;
-            color: white;
+            color: var(--beige);
         }
         .social-icons a:hover {
-            color: #FFD700;
+            color: var(--vert-clair);
         }
     </style>
 </head>
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg">
         <div class="container px-5">
             <a class="navbar-brand" href="index.html">
                 <img src="css/img/logo.png" alt="Logo Tawa" height="50">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i data-feather="menu"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#about">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#gameplay">Gameplay</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#news">Actualités</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
 </header>
@@ -110,7 +135,7 @@
 
 <section id="about" class="container py-5 text-center">
     <h2>🔍 À propos du jeu</h2>
-    <p><strong>Tawa: Lost in Time</strong> est un jeu d'aventure où vous incarnez <strong>Saora</strong>, un petit mammifère tentant de survivre parmi les dinosaures et découvrir les secrets d'un monde en mutation.</p>
+    <p><strong>Tawa: Lost in Time</strong> est un jeu d'aventure où vous incarnez <strong>Saora</strong>, un petit mammifère tentant de survivre parmi les dinosaures.</p>
     <div class="image-container">
         <img src="css/img/about-game.jpg" alt="Image du jeu">
     </div>
