@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Découvrez Tawa: Lost in Time, un jeu d'aventure préhistorique unique avec des dinosaures et des mystères. Sortie prévue en 2025 !">
+    <meta name="description" content="Découvrez Tawa: Lost in Time, un jeu d'aventure et de survie préhistorique. Explorez un monde fascinant, affrontez des dangers et percez des mystères.">
     <meta name="keywords" content="jeu vidéo, préhistoire, dinosaures, aventure, survie, exploration, Tawa Lost in Time, indie game">
     <meta name="author" content="Studio Tawa Games">
     <title>Tawa: Lost in Time - Accueil</title>
@@ -38,63 +38,97 @@
     </script>
 
     <style>
+        /* Palette de couleurs */
+        :root {
+            --vert-foncé: #1B5E20;
+            --vert-clair: #388E3C;
+            --blanc: #FFFFFF;
+            --gris-clair: #F5F5F5;
+            --noir: #000000;
+        }
+
+        /* Style général */
         body {
-            background-color: #2E7D32;
-            color: white;
+            background-color: var(--blanc);
+            color: var(--noir);
             font-family: 'Arial', sans-serif;
         }
-        .hero {
-            background: url('css/img/jungle-bg.jpg') no-repeat center/cover;
-            padding: 120px 0;
-            text-align: center;
-            color: white;
+
+        /* Navigation */
+        .navbar {
+            background-color: var(--vert-foncé);
+            padding: 15px 0;
         }
-        .btn-primary {
-            background-color: #388E3C;
-            border-color: #2E7D32;
-        }
-        .footer {
-            background-color: #1B5E20;
-            padding: 20px 0;
-        }
-        .countdown {
-            font-size: 1.5rem;
+        .navbar a {
+            color: var(--blanc);
             font-weight: bold;
-            margin-top: 10px;
         }
+        .navbar a:hover {
+            color: var(--gris-clair);
+        }
+
+        /* Section Héro */
+        .hero {
+            background: url('css/jungle-bg.jpg') no-repeat center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: var(--blanc);
+        }
+
+        /* Boutons */
+        .btn-primary {
+            background-color: var(--vert-clair);
+            border-color: var(--vert-foncé);
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            color: var(--blanc);
+        }
+        .btn-primary:hover {
+            background-color: var(--blanc);
+            color: var(--vert-foncé);
+            border-color: var(--blanc);
+        }
+
+        /* Sections alternées */
+        .section-white {
+            background-color: var(--blanc);
+            color: var(--noir);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section-green {
+            background-color: var(--vert-foncé);
+            color: var(--blanc);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        /* Pied de page */
+        .footer {
+            background-color: var(--vert-foncé);
+            color: var(--blanc);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Images */
         .image-container img {
-            width: 70%;
+            width: 80%;
             border-radius: 10px;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            font-size: 1.5rem;
-            color: white;
-        }
-        .social-icons a:hover {
-            color: #FFD700;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg">
         <div class="container px-5">
             <a class="navbar-brand" href="index.html">
                 <img src="css/logo.png" alt="Logo Tawa" height="50">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i data-feather="menu"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#about">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#gameplay">Gameplay</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#news">Actualités</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
 </header>
@@ -108,31 +142,37 @@
     </div>
 </section>
 
-<section id="about" class="container py-5 text-center">
-    <h2>🔍 À propos du jeu</h2>
-    <p><strong>Tawa: Lost in Time</strong> est un jeu d'aventure où vous incarnez <strong>Saora</strong>, un petit mammifère tentant de survivre parmi les dinosaures et découvrir les secrets d'un monde en mutation.</p>
-    <div class="image-container">
-        <img src="css/img/about-game.jpg" alt="Image du jeu">
+<section id="about" class="section-white">
+    <div class="container">
+        <h2>🔍 À propos du jeu</h2>
+        <p><strong>Tawa: Lost in Time</strong> est un jeu d'aventure où vous incarnez <strong>Saora</strong>, un petit mammifère tentant de survivre parmi les dinosaures.</p>
+        <div class="image-container">
+            <img src="css/about-game.jpg" alt="Image du jeu">
+        </div>
     </div>
 </section>
 
-<section id="gameplay" class="container py-5 text-center">
-    <h2>🎮 Gameplay</h2>
-    <p>Découvrez les mécaniques uniques de **Tawa**, de l’instinct animal aux interactions avec un environnement dynamique.</p>
-    <div class="image-container">
-        <img src="css/img/gameplay-screenshot.jpg" alt="Gameplay de Tawa">
+<section id="gameplay" class="section-green">
+    <div class="container">
+        <h2>🎮 Gameplay</h2>
+        <p>Découvrez les mécaniques uniques de **Tawa**, de l’instinct animal aux interactions avec un environnement dynamique.</p>
+        <div class="image-container">
+            <img src="css/gameplay-screenshot.jpg" alt="Gameplay de Tawa">
+        </div>
+        <iframe width="70%" height="400" src="https://www.youtube.com/embed/YPvPDBrJTi8" frameborder="0" allowfullscreen></iframe>
     </div>
-    <iframe width="70%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
 </section>
 
-<footer class="footer text-center">
+<section id="community" class="section-white">
+    <div class="container">
+        <h2>🌍 Rejoignez la communauté</h2>
+        <p>Discutez avec d'autres joueurs et suivez l’actualité du jeu sur nos réseaux sociaux.</p>
+        <a href="[LIEN DISCORD]" class="btn btn-primary">📢 Rejoindre Discord</a>
+    </div>
+</section>
+
+<footer class="footer">
     <p>&copy; 2025 Tawa Games. Tous droits réservés.</p>
-    <div class="social-icons">
-        <a href="[LIEN DISCORD]" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="[LIEN TWITTER]" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="[LIEN INSTAGRAM]" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="[LIEN YOUTUBE]" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
 </footer>
 
 <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
