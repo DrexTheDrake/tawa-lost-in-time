@@ -42,10 +42,8 @@
         :root {
             --vert-foncé: #1B5E20;
             --vert-clair: #388E3C;
-            --brun: #5D4037;
-            --beige: #F5F5DC;
             --blanc: #FFFFFF;
-            --gris-clair: #ECECEC;
+            --gris-clair: #F5F5F5;
             --noir: #000000;
         }
 
@@ -66,10 +64,10 @@
             font-weight: bold;
         }
         .navbar a:hover {
-            color: var(--beige);
+            color: var(--gris-clair);
         }
 
-        /* Section héro (bannière) */
+        /* Section héro */
         .hero {
             background: url('css/img/jungle-bg.jpg') no-repeat center/cover;
             padding: 120px 0;
@@ -78,14 +76,19 @@
             position: relative;
         }
 
-        .hero::after {
-            content: "";
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: linear-gradient(135deg, var(--vert-foncé) 50%, transparent 50%);
+        /* Sections alternées */
+        .section-white {
+            background-color: var(--blanc);
+            color: var(--noir);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section-green {
+            background-color: var(--vert-foncé);
+            color: var(--blanc);
+            padding: 80px 0;
+            text-align: center;
         }
 
         /* Boutons */
@@ -99,29 +102,9 @@
         }
 
         .btn-primary:hover {
-            background-color: var(--brun);
-            border-color: var(--brun);
-        }
-
-        /* Sections avec angles inclinés */
-        .section {
-            padding: 80px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        .section:nth-child(even) {
-            background-color: var(--gris-clair);
-        }
-
-        .section::after {
-            content: "";
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: linear-gradient(-135deg, var(--gris-clair) 50%, transparent 50%);
+            background-color: var(--blanc);
+            color: var(--vert-foncé);
+            border-color: var(--blanc);
         }
 
         /* Pied de page */
@@ -136,18 +119,7 @@
         .image-container img {
             width: 80%;
             border-radius: 10px;
-            border: 3px solid var(--brun);
             margin-top: 20px;
-        }
-
-        /* Icônes sociales */
-        .social-icons a {
-            margin: 0 10px;
-            font-size: 1.5rem;
-            color: var(--blanc);
-        }
-        .social-icons a:hover {
-            color: var(--beige);
         }
     </style>
 </head>
@@ -172,17 +144,17 @@
     </div>
 </section>
 
-<section id="about" class="section">
+<section id="about" class="section-white">
     <div class="container">
         <h2>🔍 À propos du jeu</h2>
         <p><strong>Tawa: Lost in Time</strong> est un jeu d'aventure où vous incarnez <strong>Saora</strong>, un petit mammifère tentant de survivre parmi les dinosaures.</p>
         <div class="image-container">
-            <img src="css/logo.png" alt="Image du jeu">
+            <img src="css/img/about-game.jpg" alt="Image du jeu">
         </div>
     </div>
 </section>
 
-<section id="gameplay" class="section">
+<section id="gameplay" class="section-green">
     <div class="container">
         <h2>🎮 Gameplay</h2>
         <p>Découvrez les mécaniques uniques de **Tawa**, de l’instinct animal aux interactions avec un environnement dynamique.</p>
@@ -193,6 +165,13 @@
     </div>
 </section>
 
+<section id="community" class="section-white">
+    <div class="container">
+        <h2>🌍 Rejoignez la communauté</h2>
+        <p>Discutez avec d'autres joueurs et suivez l’actualité du jeu sur nos réseaux sociaux.</p>
+        <a href="[LIEN DISCORD]" class="btn btn-primary">📢 Rejoindre Discord</a>
+    </div>
+</section>
 
 <footer class="footer">
     <p>&copy; 2025 Tawa Games. Tous droits réservés.</p>
