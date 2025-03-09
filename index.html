@@ -31,18 +31,104 @@
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                document.getElementById("countdown").innerHTML = `⏳ Sortie dans : ${days}j ${hours}h ${minutes}m`;
+                document.getElementById("countdown").innerHTML = ⏳ Sortie dans : ${days}j ${hours}h ${minutes}m;
             }, 1000);
         }
         window.onload = countdown;
     </script>
+
+    <style>
+        /* Palette de couleurs */
+        :root {
+            --vert-foncé: #1B5E20;
+            --vert-clair: #388E3C;
+            --blanc: #FFFFFF;
+            --gris-clair: #F5F5F5;
+            --noir: #000000;
+        }
+
+        /* Style général */
+        body {
+            background-color: var(--blanc);
+            color: var(--noir);
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: var(--vert-foncé);
+            padding: 15px 0;
+        }
+        .navbar a {
+            color: var(--blanc);
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            color: var(--gris-clair);
+        }
+
+        /* Section Héro */
+        .hero {
+            background: url('css/IMG_20250309_151036.jpg') no-repeat center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: var(--blanc);
+        }
+
+        /* Boutons */
+        .btn-primary {
+            background-color: var(--vert-clair);
+            border-color: var(--vert-foncé);
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            color: var(--blanc);
+        }
+        .btn-primary:hover {
+            background-color: var(--blanc);
+            color: var(--vert-foncé);
+            border-color: var(--blanc);
+        }
+
+        /* Sections alternées */
+        .section-white {
+            background-color: var(--blanc);
+            color: var(--noir);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section-green {
+            background-color: var(--vert-foncé);
+            color: var(--blanc);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        /* Pied de page */
+        .footer {
+            background-color: var(--vert-foncé);
+            color: var(--blanc);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Images */
+        .image-container img {
+            width: 80%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
 <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container px-5">
-            <a class="navbar-brand" href="index.html">TAWA - Lost In Time</a>
+            <a class="navbar-brand" href="index.html">
+            <div>TAWA - Lost In Time</div> 
+            </a>
         </div>
     </nav>
 </header>
@@ -60,7 +146,8 @@
     <div class="container">
         <h2>🔍 À propos du jeu</h2>
         <p><strong>Tawa: Lost in Time</strong> est un jeu d'aventure où vous incarnez <strong>Saora</strong>, un petit mammifère tentant de survivre parmi les dinosaures.</p>
-        <p>Explorez, survivez, et adaptez-vous dans Tawa: Lost in Time, un jeu d'aventure unique en pleine préhistoire.</p>
+                <p>Explorez, survivez, et adaptez-vous dans Tawa: Lost in Time, un jeu d'aventure unique en pleine préhistoire. Incarnez un petit mammifère face aux géants du Crétacé et découvrez un monde en perpétuelle évolution. Saurez-vous survivre ?</p>
+
         <div class="image-container">
             <img src="css/about-game1.png" alt="Image du jeu">
         </div>
@@ -70,25 +157,35 @@
 <section id="gameplay" class="section-white">
     <div class="container">
         <h2>🎮 Gameplay</h2>
-        <p>Découvrez les mécaniques uniques de <strong>Tawa</strong>, de l’instinct animal aux interactions avec un environnement dynamique.</p>
-        <p>Dans Tawa, il n'y a ni armes ni super-pouvoirs : seulement votre instinct. Cachez-vous, observez et trouvez des stratégies pour survivre face à des prédateurs impitoyables.</p>
+        <p>Découvrez les mécaniques uniques de **Tawa**, de l’instinct animal aux interactions avec un environnement dynamique.</p>
+        <p>Dans Tawa, il n'y a ni armes ni super-pouvoirs : seulement votre instinct. Cachez-vous, observez et trouvez des stratégies pour survivre face à des prédateurs impitoyables et une nature sauvage imprévisible.</p>
+
         <iframe width="100%" height="400" src="https://www.youtube.com/embed/YPvPDBrJTi8" frameborder="0" allowfullscreen></iframe>
     </div>
 </section>
 
-<section id="community" class="section-green">
+<section id="about" class="section-green">
     <div class="container">
+                <div class="image-container">
+            <img src="css/css/about-game2.png" alt="Gameplay de Tawa">
+        </div>
         <h2>🌍 Rejoignez la communauté</h2>
         <p>Discutez avec d'autres joueurs et suivez l’actualité du jeu sur nos réseaux sociaux.</p>
-                    <img src="css/about-game2.png" alt="Image du jeu">
-        <a href="#" class="btn btn-primary">📢 Rejoindre Discord</a>
+        <a href="[LIEN DISCORD]" class="btn btn-primary">📢 Rejoindre Discord</a>
     </div>
 </section>
+<section id="gameplay" class="section-white">
+    <div class="container">
+        <h2>🎮 Gameplay</h2>
+        <p>Chaque jour est un défi : les dinosaures migrent, les tempêtes menacent, et chaque choix peut être le dernier. Tawa: Lost in Time vous plonge dans une survie immersive où seule l’adaptation compte.</p>
 
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/YPvPDBrJTi8" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
 <footer class="footer">
     <p>&copy; 2025 Tawa Games. Tous droits réservés.</p>
 </footer>
 
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
