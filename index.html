@@ -1,181 +1,141 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Découvrez Tawa: Lost in Time, un jeu d'aventure et de survie préhistorique. Explorez un monde fascinant, affrontez des dangers et percez des mystères." />
-    <meta name="keywords" content="jeu vidéo, préhistoire, dinosaures, aventure, survie, exploration, Tawa Lost in Time, indie game, jeu de survie, Crétacé, TAWA" />
-    <meta name="author" content="Studio Tawa Games" />
-    <meta property="og:title" content="Tawa: Lost in Time - Jeu de survie préhistorique" />
-    <meta property="og:description" content="Incarnez TAWA, un petit mammifère pris au piège dans un monde de dinosaures. Un jeu d'exploration et de survie intense." />
-    <meta property="og:image" content="https://drexthedrake.github.io/tawa-lost-in-time/css/logo.png" />
-    <meta property="og:url" content="https://drexthedrake.github.io/tawa-lost-in-time/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>Tawa: Lost in Time - Accueil</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Découvrez Tawa: Lost in Time, un jeu d'aventure et de survie préhistorique. Explorez un monde fascinant, affrontez des dangers et percez des mystères." />
+  <meta name="keywords" content="jeu vidéo, préhistoire, dinosaures, aventure, survie, exploration, Tawa Lost in Time, indie game, jeu de survie, Crétacé, TAWA" />
+  <meta name="author" content="Studio Tawa Games" />
+  <meta property="og:title" content="Tawa: Lost in Time - Jeu de survie préhistorique" />
+  <meta property="og:description" content="Incarnez TAWA, un petit mammifère pris au piège dans un monde de dinosaures. Un jeu d'exploration et de survie intense." />
+  <meta property="og:image" content="https://drexthedrake.github.io/tawa-lost-in-time/css/logo.png" />
+  <meta property="og:url" content="https://drexthedrake.github.io/tawa-lost-in-time/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Tawa: Lost in Time - Accueil</title>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" type="image/png" href="css/img/favicon.png" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="css/img/favicon.png" />
 
-    <!-- FontAwesome & Feather Icons -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+  <!-- FontAwesome & Feather Icons -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
 
-    <!-- SEO JSON-LD : Jeu + Studio -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "VideoGame",
-          "name": "Tawa: Lost in Time",
-          "url": "https://drexthedrake.github.io/tawa-lost-in-time/",
-          "image": "https://drexthedrake.github.io/tawa-lost-in-time/css/logo.png",
-          "description": "Tawa: Lost in Time est un jeu de survie et d’exploration dans un monde préhistorique fascinant, où vous incarnez un petit mammifère face aux dinosaures.",
-          "genre": ["Aventure", "Survie", "Exploration"],
-          "publisher": {
-            "@type": "Organization",
-            "name": "Tawa Games",
-            "url": "https://drexthedrake.github.io/tawa-lost-in-time/"
-          },
-          "inLanguage": "fr",
-          "operatingSystem": "Windows",
-          "datePublished": "2025-09-15",
-          "sameAs": [
-            "https://youtube.com/@drex-tawa-lost-in-time?si=FucPC_fMaft2MwdI",
-            "https://www.instagram.com/drexthedrake?igsh=dHF4cGlxc3RheW41"
-          ]
-        },
-        {
-          "@type": "Organization",
-          "name": "Tawa Games",
-          "url": "https://drexthedrake.github.io/tawa-lost-in-time/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://drexthedrake.github.io/tawa-lost-in-time/css/logo.png"
-          },
-          "sameAs": [
-            "https://youtube.com/@drex-tawa-lost-in-time?si=FucPC_fMaft2MwdI",
-            "https://www.instagram.com/drexthedrake?igsh=dHF4cGlxc3RheW41"
-          ]
-        }
-      ]
-    }
-    </script>
-
-    <!-- Countdown -->
-    <script>
+  <!-- Countdown -->
+  <script>
     function countdown() {
-        const releaseDate = new Date("2025-09-15T00:00:00").getTime();
-        const timer = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = releaseDate - now;
-            if (distance < 0) {
-                clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "🚀 Tawa: Lost in Time est maintenant disponible !";
-                return;
-            }
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById("countdown").innerHTML = `⏳ Sortie dans : ${days}j ${hours}h ${minutes}m`;
-        }, 1000);
+      const releaseDate = new Date("2025-09-15T00:00:00").getTime();
+      const timer = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = releaseDate - now;
+        if (distance < 0) {
+          clearInterval(timer);
+          document.getElementById("countdown").innerHTML = "🚀 Tawa: Lost in Time est maintenant disponible !";
+          return;
+        }
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById("countdown").innerHTML = `⏳ Sortie dans : ${days}j ${hours}h ${minutes}m`;
+      }, 1000);
     }
     window.onload = countdown;
-    </script>
+  </script>
 
-    <!-- Style local -->
-    <style>
-        :root {
-            --vert-foncé: #1B5E20;
-            --vert-clair: #388E3C;
-            --blanc: #FFFFFF;
-            --gris-clair: #F5F5F5;
-            --noir: #000000;
-        }
+  <!-- Style local -->
+  <style>
+    :root {
+      --sable: #F2E8D5;
+      --cuir: #A67B5B;
+      --brun-fonce: #5A3E2B;
+      --parchemin: #FAF4E4;
+      --dore: #C9A66B;
+      --texte-brun: #2E1C0C;
+    }
 
-        body {
-            background-color: var(--blanc);
-            color: var(--noir);
-            font-family: 'Arial', sans-serif;
-            scroll-behavior: smooth;
-        }
+    body {
+      background-color: var(--parchemin);
+      color: var(--texte-brun);
+      font-family: 'Georgia', serif;
+      scroll-behavior: smooth;
+    }
 
-        .navbar {
-            background-color: var(--vert-foncé);
-            padding: 15px 0;
-        }
-        .navbar a {
-            color: var(--blanc);
-            font-weight: bold;
-        }
-        .navbar a:hover {
-            color: var(--gris-clair);
-        }
+    .navbar {
+      background-color: var(--brun-fonce);
+      padding: 15px 0;
+    }
+    .navbar a {
+      color: var(--parchemin);
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      color: var(--dore);
+    }
 
-        .hero {
-            background: url('css/IMG_20250309_151036.jpg') no-repeat center/cover;
-            padding: 100px 0;
-            text-align: center;
-            color: var(--blanc);
-            position: relative;
-        }
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 0;
-        }
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
+    .hero {
+      background: url('css/IMG_20250309_151036.jpg') no-repeat center/cover;
+      padding: 100px 0;
+      text-align: center;
+      color: var(--parchemin);
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
 
-        .btn-primary {
-            background-color: var(--vert-clair);
-            border-color: var(--vert-foncé);
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 8px;
-            color: var(--blanc);
-        }
-        .btn-primary:hover {
-            background-color: var(--blanc);
-            color: var(--vert-foncé);
-            border-color: var(--blanc);
-        }
+    .btn-primary {
+      background-color: var(--cuir);
+      border-color: var(--brun-fonce);
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 8px;
+      color: var(--parchemin);
+    }
+    .btn-primary:hover {
+      background-color: var(--parchemin);
+      color: var(--brun-fonce);
+      border-color: var(--cuir);
+    }
 
-        .section-white {
-            background-color: var(--blanc);
-            color: var(--noir);
-            padding: 80px 0;
-            text-align: center;
-        }
+    .section-white {
+      background-color: var(--parchemin);
+      color: var(--texte-brun);
+      padding: 80px 0;
+      text-align: center;
+    }
 
-        .section-green {
-            background-color: var(--vert-foncé);
-            color: var(--blanc);
-            padding: 80px 0;
-            text-align: center;
-        }
+    .section-green {
+      background-color: var(--sable);
+      color: var(--texte-brun);
+      padding: 80px 0;
+      text-align: center;
+    }
 
-        .footer {
-            background-color: var(--vert-foncé);
-            color: var(--blanc);
-            padding: 20px 0;
-            text-align: center;
-        }
+    .footer {
+      background-color: var(--brun-fonce);
+      color: var(--parchemin);
+      padding: 20px 0;
+      text-align: center;
+    }
 
-        .image-container img {
-            width: 80%;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-    </style>
+    .image-container img {
+      width: 60%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
-
+<body>
 <body>
 <header>
     <nav class="navbar navbar-expand-lg">
